@@ -9,7 +9,7 @@ pub mod tocken {
         DIVIDE,
         POWER,
         OPEN,
-        CLOSE
+        CLOSE,
     }
 
     /// generates a vector of operation and index
@@ -24,6 +24,8 @@ pub mod tocken {
                 '*' => output.push((Operation::TIMES, index)),
                 '/' => output.push((Operation::DIVIDE, index)),
                 '^' => output.push((Operation::POWER, index)),
+                '(' => output.push((Operation::OPEN, index)),
+                ')' => output.push((Operation::CLOSE, index)),
                 _ => continue,
             }
         }
