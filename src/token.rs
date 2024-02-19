@@ -1,7 +1,7 @@
-mod tocken {
+pub mod tocken {
     use std::usize;
 
-    // math operations
+    #[derive(Debug)]
     pub enum Operation {
         PLUS,
         MINUS,
