@@ -1,4 +1,4 @@
-mod tocken {
+mod token {
     use std::usize;
 
     // math operations
@@ -24,6 +24,8 @@ mod tocken {
                 '*' => output.push((Operation::TIMES, index)),
                 '/' => output.push((Operation::DIVIDE, index)),
                 '^' => output.push((Operation::POWER, index)),
+                '(' => output.push((Operation::OPEN, index)),
+                ')' => output.push((Operation::CLOSE, index)),
                 _ => continue,
             }
         }
