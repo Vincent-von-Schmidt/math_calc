@@ -1,4 +1,6 @@
-pub mod tocken {
+
+pub mod token {
+
     use std::usize;
 
     #[derive(Debug)]
