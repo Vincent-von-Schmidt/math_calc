@@ -1,7 +1,9 @@
-mod token {
+
+pub mod token {
+
     use std::usize;
 
-    // math operations
+    #[derive(Debug)]
     pub enum Operation {
         PLUS,
         MINUS,
@@ -9,7 +11,7 @@ mod token {
         DIVIDE,
         POWER,
         OPEN,
-        CLOSE
+        CLOSE,
     }
 
     /// generates a vector of operation and index
