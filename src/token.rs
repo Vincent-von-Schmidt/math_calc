@@ -8,6 +8,8 @@ mod tocken {
         TIMES,
         DIVIDE,
         POWER,
+        OPEN,
+        CLOSE
     }
 
     /// generates a vector of operation and index
