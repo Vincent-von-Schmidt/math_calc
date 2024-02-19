@@ -18,16 +18,18 @@ pub mod tocken {
     pub fn gen_tockens(text: &String) -> Vec<(Operation, usize)> {
         let mut output: Vec<(Operation, usize)> = Vec::new();
         for (index, chr) in text.chars().enumerate() {
-            match chr {
-                '+' => output.push((Operation::PLUS, index)),
-                '-' => output.push((Operation::MINUS, index)),
-                '*' => output.push((Operation::TIMES, index)),
-                '/' => output.push((Operation::DIVIDE, index)),
-                '^' => output.push((Operation::POWER, index)),
-                '(' => output.push((Operation::OPEN, index)),
-                ')' => output.push((Operation::CLOSE, index)),
+            let token: Operation = match chr {
+                '+' => Operation::PLUS,
+                '-' => Operation::MINUS,
+                '*' => Operation::TIMES,
+                '/' => Operation::DIVIDE,
+                '^' => Operation::POWER,
+                '(' => Operation::OPEN,
+                ')' => Operation::CLOSE,
                 _ => continue,
-            }
+            };
+
+            output.push((token, index));
         }
         return output;
     }
